@@ -1,6 +1,6 @@
-# 🔓 Decodificador JWT Online Gratis
+# JWT Decoder — Free Online Tool
 
-**Free JWT Decoder.** Decode any JSON Web Token instantly. View header and payload as formatted JSON with syntax highlighting, check standard claims (exp, iat, sub, iss, aud), verify token expiry with exact date. No sign-up, no ads, 100% client-side.
+**JWT Decoder.** Decode JWT instantly. Header, payload, standard claims and expiry verification. No sign-up, no ads, 100% client-side.
 
 🌐 **Demo en vivo / Live demo:** [miguelacm.es/tools/jwt-decoder](https://miguelacm.es/tools/jwt-decoder)
 
@@ -13,14 +13,9 @@
 
 ## ✨ Features
 
-- **Decodificación base64url / base64url decoding:** Decodes header and payload from base64url format
-- **JSON formateado / Formatted JSON:** Color syntax highlighting for keys (blue), strings (green), numbers (yellow), booleans (orange)
-- **Verificación exp / Expiry check:** Automatically detects exp claim and shows if token is expired with exact date
-- **Claims estándar / Standard claims:** Highlights sub, iss, aud, iat, exp, nbf, jti with human-readable dates
-- **Copiar partes / Copy parts:** Copy header or payload JSON formatted with one click
-- **Ejemplo incluido / Sample included:** Load a sample JWT to test the tool instantly
-- **Sin servidor / Zero server:** All decoding happens in the browser — nothing sent to a server
-- **Open source:** MIT license, use it freely
+- **🧩 Full decode:** Header and payload pretty-printed with standard claims explained.
+- **⏰ Expiry check:** See at a glance whether the token is still valid.
+- **🔒 100% private:** Tokens are parsed locally and never sent anywhere.
 
 ---
 
@@ -46,8 +41,6 @@ NEXT_PUBLIC_EMBED_URL=https://miguelacm.es/embed/jwt-decoder
 
 ## 📦 Embed on your website
 
-### Iframe (plug & play)
-
 ```html
 <iframe
   src="https://miguelacm.es/embed/jwt-decoder"
@@ -63,11 +56,11 @@ NEXT_PUBLIC_EMBED_URL=https://miguelacm.es/embed/jwt-decoder
 
 ```html
 <a href="https://miguelacm.es/tools/jwt-decoder" target="_blank" rel="noopener">
-  Decodificador JWT gratis por MACM
+  JWT Decoder — free tool by MACM
 </a>
 ```
 
-> 💡 The link option generates a real backlink that benefits the project. Recommended if your platform supports custom HTML.
+> 💡 The link option generates a real backlink that benefits the project.
 
 ---
 
@@ -75,7 +68,7 @@ NEXT_PUBLIC_EMBED_URL=https://miguelacm.es/embed/jwt-decoder
 
 | Technology | Version | Purpose |
 |---|---|---|
-| [Next.js](https://nextjs.org) | 16 | React framework + SSG |
+| [Next.js](https://nextjs.org) | 16 | React framework |
 | [TypeScript](https://www.typescriptlang.org) | 5 | Type safety |
 | [Tailwind CSS](https://tailwindcss.com) | 4 | Styling |
 | [react-icons](https://react-icons.github.io/react-icons/) | 5 | Icons |
