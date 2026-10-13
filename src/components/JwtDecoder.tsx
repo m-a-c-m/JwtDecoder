@@ -24,7 +24,8 @@ function base64UrlDecode(str: string): string {
 }
 
 function syntaxHighlight(json: string): string {
-  return json.replace(
+  const escaped = json.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return escaped.replace(
     /("(\\u[\dA-Fa-f]{4}|\\[^u]|[^\\"])*"(?:\s*:)?|\b(?:true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g,
     (match) => {
       let cls = "text-yellow-400"; // number
@@ -91,12 +92,12 @@ function decodeJWT(token: string): Decoded {
 }
 
 function ExpiryBadge({ payload, isEs }: { payload: Record<string, unknown>; isEs: boolean }) {
-  const exp = payload.exp as number | undefined;
+  const exp = typeof payload.exp === "number" ? payload.exp : undefined;
   if (!exp) return null;
   const now = Math.floor(Date.now() / 1000);
   const expired = now > exp;
   const date = new Date(exp * 1000);
-  const iat = payload.iat as number | undefined;
+  const iat = typeof payload.iat === "number" ? payload.iat : undefined;
 
   return (
     <div
